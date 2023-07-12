@@ -30,7 +30,7 @@ public final class Constants {
     static final String PROP_DEVICE = "ro.aex.device";
     static final String PROP_BUILD_VERSION = "ro.modversion";
     static final String PROP_VERSION_CODE = "ro.extended.ota.version_code";
-    static final String OTA_URL = "https://api.aospextended.com/ota_v2/%s/%s";
-    static final String DOWNLOAD_WEBPAGE_URL = "https://downloads.aospextended.com/download/%s/%s/%s";
+    static final String OTA_URL = "https://raw.githubusercontent.com/RampageOS-Devices/official_devices/rifle/builds/%s.json";
+    static final String DOWNLOAD_WEBPAGE_URL = "https://raw.githubusercontent.com/RampageOS-Devices/official_devices/rifle/changelogs/%s.txt";
     static final String EXPORT_PATH = "AospExtended-Updates/";
 }

@@ -116,8 +116,8 @@ public class LocalInstallationActivity extends UpdatesListActivity implements Fi
             // loops through the array of files, and filter out valid zip files
             for (File file : dirFiles) {
                 String fileOutput = file.getName();
-                // Filter out AEX builds
-                if(fileOutput.startsWith("AospExtended") && fileOutput.endsWith(".zip")) {
+                // Filter out RampageOS builds
+                if(fileOutput.startsWith("RampageOS") && fileOutput.endsWith(".zip")) {
                     filteredFiles.add(file);
                 }
             }

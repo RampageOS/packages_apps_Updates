@@ -95,12 +95,12 @@ public class Utils {
         update.setDownloadUrl(object.getString("url"));
         update.setVersion(object.getString("version"));
         update.setHash(object.getString("filehash"));
-        update.setMaintainer(object.isNull("maintainer") ? "" : object.getString("maintainer"));
-        update.setMaintainerUrl(object.isNull("maintainer_url") ? "" : object.getString("maintainer_url"));
-        update.setDonateUrl(object.isNull("donate_url") ? "" : object.getString("donate_url"));
-        update.setForumUrl(object.isNull("forum_url") ? "" : object.getString("forum_url"));
-        update.setWebsiteUrl(object.isNull("website_url") ? "" : object.getString("website_url"));
-        update.setNewsUrl(object.isNull("news_url") ? "" : object.getString("news_url"));
+        update.setMaintainer(object.getString("maintainer"));
+        update.setMaintainerUrl(object.getString("maintainer_url"));
+        update.setDonateUrl("https://github.com/RampageOS-Devices/official_devices");
+        update.setForumUrl("https://github.com/RampageOS-Devices/official_devices");
+        update.setWebsiteUrl("https://github.com/RampageOS");
+        update.setNewsUrl("https://github.com/RampageOS-Devices/official_devices");
         return update;
     }
 

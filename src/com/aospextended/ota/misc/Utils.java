@@ -105,10 +105,10 @@ public class Utils {
     }
 
     public static boolean isCompatible(UpdateBaseInfo update) {
-        if (update.getVersion().compareTo(SystemProperties.get(Constants.PROP_VERSION_CODE)) < 0) {
-            Log.d(TAG, update.getName() + " with version " + update.getVersion() + " is older than current Android version " + SystemProperties.get(Constants.PROP_BUILD_VERSION));
-            return false;
-        }
+       // if (update.getVersion().compareTo(SystemProperties.get(Constants.PROP_VERSION_CODE)) < 0) {
+       //     Log.d(TAG, update.getName() + " with version " + update.getVersion() + " is older than current Android version " + SystemProperties.get(Constants.PROP_BUILD_VERSION));
+       //     return false;
+       // }
         if (update.getTimestamp() <= SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0)) {
             Log.d(TAG, update.getName() + " with timestamp " + update.getTimestamp() + " is older than/equal to the current build " + SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0));
             return false;
@@ -117,9 +117,7 @@ public class Utils {
     }
 
     public static boolean canInstall(UpdateBaseInfo update) {
-        return (update.getTimestamp() > SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0)) &&
-                update.getVersion().equalsIgnoreCase(
-                        SystemProperties.get(Constants.PROP_VERSION_CODE));
+        return (update.getTimestamp() > SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0));
     }
 
     public static UpdateInfo parseJson(File file, boolean compatibleOnly, Context context)
